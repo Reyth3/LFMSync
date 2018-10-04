@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LFMSync</string>
+    <string name="title_source">Sync</string>
+    <string name="title_me">My Scrobbles</string>
+  <string name="action_setsource">Set Source</string>
+  <string name="action_refresh">Refresh Scrobbles</string>
+  <string name="label_privacy">Privacy Policy</string>
+</resources>

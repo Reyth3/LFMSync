@@ -1,0 +1,28 @@
+﻿<controls:MetroWindow x:Class="LFMSync.ScrobbleInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:local="clr-namespace:LFMSync"
+        mc:Ignorable="d"
+        Title="Scrobble Info" Height="250" Width="450" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid Margin="4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Image Margin="4" Source="{Binding Path=Images.Medium}" />
+        <ItemsControl Margin="4" Name="properties" Grid.Column="1">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock TextWrapping="WrapWithOverflow">
+                        <Run FontWeight="Medium" Text="{Binding Path=Key, Mode=OneWay}" />
+                        <Run FontWeight="Medium" Text=": " />
+                        <Run Text="{Binding Path=Value,Mode=OneWay}" />
+                    </TextBlock>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+</controls:MetroWindow>
